@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>JS Challenge</title>
     <script defer src="debounce.js"></script>
-
+    <script defer src="throttle.js"></script>
     <style>
         body {
         font-family: system-ui;
@@ -25,21 +25,37 @@
 
         #output {
         margin-top: 20px;
-        padding: 10px;
+        padding: 5px;
+       
         background: #f4f4f4;
-        min-height: 40px;
+        min-height: 55px;
         }
     </style>
     </head>
 
     <body>
+    <div class="container" style="display:grid; gap: 40px; grid-template-columns: 1fr 1fr;">
     <div class="container">
-        <h1>Debounce Challenge</h1>
+        <h1>Debounce</h1>
 
         <input  id="debounceInput" placeholder="Type something..." />
-        <input value="250ms" id="debounceDelay" placeholder="Debounce delay (ms)" />
+        <input value="250" id="debounceDelay" placeholder="Debounce delay (ms)" />
         <div id="output"><p id="debounceOutput"></p></div>
+   </div>
+    <div class="container">
+        <h1>Throttle</h1>
+        <input  id="throttleInput" placeholder="Type something..." />
+        <input value="250" id="throttleDelay" placeholder="Throttle delay (ms)" />
+        <div id="output"><p id="throttleOutput"></p></div>
     </div>
-
+</div>
+ 
+        <div class="container" style="margin: 80px auto;">
+        <p>Debounce resets the delay timer on each input within the delay window. Throttle
+            has a fixed delay and one input (the first one in the delay window) is executed at the end of each delay window, 
+            no matter how many inputs are made within that window.
+        </p>
+        </div>
+</div>
     </body>
     </html>

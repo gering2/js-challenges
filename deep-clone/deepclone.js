@@ -16,4 +16,6 @@ b = {}
 b.x = a.x // since x is a primitive, b.x will be a copy not a reference to a.x, so different memory location
 console.log(a.x === b.x) // true because they both reference the same primitive value 1
 console.log(a === b) // false because a and b are different objects in memory
+
+if b = {x:}  
 */
