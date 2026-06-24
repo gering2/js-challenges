@@ -27,6 +27,6 @@ const obj = {
   }
 };
 
-obj.getY = memoize(obj.getY); // 'this' loses binding to obj as memoize returns a new function that is not bound to obj
+obj.getY = memoize(obj.getY); // 'this' loses binding to obj as memoize returns a new function that is not bound to obj. 
 obj.getY(5); // broken if `this` is lost
 */
